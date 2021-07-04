@@ -8,7 +8,7 @@ public class ProductService {
                 Выберите пункт меню
                 1. Добавить продукт
                 2. Просмотреть продукт по id
-                3. Просмотреть список всех продуктов
+               
                 4. Удалить продукт
                 5. Редактировать продукт
                 6. Выход""");
@@ -66,8 +66,7 @@ public class ProductService {
         System.out.println("Введите цену продукта: ");
         double price = readDouble();
         Product product = createProduct(name, category, price);
-        ProductRepository.dataBase().
-                add(product);
+        ProductRepository.dataBase().add(product);
         System.out.println(product);
         menu();
     }
